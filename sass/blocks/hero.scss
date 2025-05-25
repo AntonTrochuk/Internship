@@ -35,6 +35,7 @@
   cursor: pointer;
   color: $color-text-mariner;
   text-transform: uppercase;
+  outline: none;
 
   transition:
     width 0.1s ease,
@@ -82,20 +83,43 @@
 .hero__navigation-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 35px 25px;
+  gap: 24px;
+  padding: 35px 25px 32px;
   margin: 0;
   border-radius: 16px;
   background-color: $color-background-mariner;
 }
 
-.hero__navigation-item {
+.hero__navigation-list-subgroup {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.2s ease,
+    max-height 0.2s ease,
+    padding 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.hero__navigation-button {
   color: $color-text-wr;
   text-transform: uppercase;
+  display: flex;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .hero__navigation-item-subgroup {
   text-transform: none;
+}
+
+.hero__navigation-text-subgroup {
+  color: $color-text-wr;
+  display: flex;
 }
 
 .hero__pagination-container {
@@ -262,4 +286,17 @@
 
 .hero__logo--none {
   display: none;
+}
+
+.hero__navigation-item--active {
+  color: $color-text-wr-active;
+}
+
+.hero__navigation-item-subgroup--active {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 1;
+  max-height: 500px;
+  padding: 15px 0 0 16px;
 }
