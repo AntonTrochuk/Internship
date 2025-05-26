@@ -6,6 +6,7 @@ const body = document.querySelector('.page-body');
 const navigationItems = document.querySelectorAll('.hero__navigation-button');
 
 const wrapperMenu = () => {
+
   buttonContainer.addEventListener('click', () => {
     buttonContainer.classList.toggle('hero__button-container--active');
     buttonToggle.classList.toggle('hero__button-toggle--active');
@@ -16,6 +17,11 @@ const wrapperMenu = () => {
     if (!buttonContainer.classList.contains('hero__button-container--active')) {
       document.querySelectorAll('.hero__navigation-item-subgroup--active, .hero__navigation-item--active').forEach((el) => {
         el.classList.remove('hero__navigation-item-subgroup--active', 'hero__navigation-item--active');
+      });
+
+      document.querySelectorAll('.hero__navigation-button-arrow--active').forEach((el) => {
+        el.classList.remove('hero__navigation-button-arrow--active');
+        el.classList.add('hero__navigation-button-arrow');
       });
     }
   });
@@ -30,6 +36,11 @@ const wrapperMenu = () => {
     document.querySelectorAll('.hero__navigation-item-subgroup--active, .hero__navigation-item--active').forEach((el) => {
       el.classList.remove('hero__navigation-item-subgroup--active', 'hero__navigation-item--active');
     });
+
+    document.querySelectorAll('.hero__navigation-button-arrow--active').forEach((el) => {
+      el.classList.remove('hero__navigation-button-arrow--active');
+      el.classList.add('hero__navigation-button-arrow');
+    });
   };
 
   navigationItems.forEach((item) => {
@@ -39,6 +50,8 @@ const wrapperMenu = () => {
       const subgroup = document.getElementById(toggleId);
       subgroup.classList.toggle('hero__navigation-item-subgroup--active');
       item.classList.toggle('hero__navigation-item--active');
+      item.classList.toggle('hero__navigation-button-arrow');
+      item.classList.toggle('hero__navigation-button-arrow--active');
     });
   });
 

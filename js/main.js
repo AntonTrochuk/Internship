@@ -48,7 +48,7 @@ const heroSlider = new Swiper(heroSwiper, {
     bulletActiveClass: 'hero__toggle--active',
     dynamicBullets: false,
     renderBullet: function (index, className) {
-      return `<span class="${ className }"></span>`;
+      return `<button class="${ className }"></button>`;
     }
   },
 
@@ -58,8 +58,8 @@ const heroSlider = new Swiper(heroSwiper, {
       spaceBetween: 30,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 18,
+      slidesPerView: 1,
+      spaceBetween: 30,
     },
     320: {
       slidesPerView: 1,
