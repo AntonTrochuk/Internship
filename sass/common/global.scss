@@ -9,6 +9,25 @@
   border: 0;
 }
 
+.swiper-scrollbar {
+  width: 562px;
+  position: relative;
+  height: 2px;
+  background: $color-background-scrollbar;
+
+  @media (min-width: $desktop-width) {
+    width: 1136px;
+  }
+}
+
+.swiper-scrollbar-drag {
+  background: $color-background-scrollbar-drag;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
 .page-body {
   font-family: $basic-font;
   font-style: normal;
@@ -114,6 +133,87 @@
   }
 }
 
+.button-secondary {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: $color-background-mariner;
+  border-radius: 44px;
+  background-image: url("/__spritemap#sprite-arrow-view");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_hover-view");
+    background-size: 10px;
+  }
+
+  &:active {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_active-view");
+    background-size: 10px;
+  }
+
+  &:focus-visible {
+    background-color: $color-background-mariner;
+    background-image: url("/__spritemap#sprite-arrow_focus-view");
+    background-size: 10px;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-arrow_disabled-view");
+    background-size: 8px;
+  }
+}
+
+.button-small-block {
+  display: flex;
+  gap: 8px;
+
+
+  .button-small {
+    width: 22px;
+    height: 22px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url("/__spritemap#sprite-button_small_next-view");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+
+    &:hover {
+      background-image: url("/__spritemap#sprite-button_small_hover-view");
+    }
+
+    &:focus-visible {
+      background-image: url("/__spritemap#sprite-button_small_next-view");
+      background-color: $color-background-white;
+    }
+
+    &:active {
+      background-image: url("/__spritemap#sprite-button_small_hover-view");
+      background-color: $color-background-white;
+    }
+
+    &:disabled {
+      background-image: url("/__spritemap#sprite-button_small_disabled-view");
+      background-color: transparent;
+    }
+  }
+
+  .button-p {
+    rotate: 180deg;
+  }
+}
+
 .button-text {
   font-weight: 500;
   font-size: 14px;
@@ -138,6 +238,37 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+}
+
+.text-g {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
+.heading-h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 17px;
+  }
 }
 
 .heading-h3 {
@@ -168,5 +299,21 @@
 
   @media (min-width: $desktop-width) {
     font-size: 50px;
+  }
+}
+
+.heading-h3-g {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
   }
 }
