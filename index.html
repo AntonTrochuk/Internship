@@ -858,57 +858,125 @@
     </section>
     <section class="main-container__form form" data-test="form">
       <div class="form__container">
-        <div class="form__text-block">
-          <h3 class="form__title heading-h3-g">
-            Напишите нам
-          </h3>
-          <p class="form__text text-g">
-            Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
-          </p>
-        </div>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <ul class="form__list">
-            <li class="form__item form__item--name">
-              <label class="form__label text-i" for="name">
-                Имя
-              </label>
-              <input class="form__input form__input--name" type="text" id="name" name="name" pattern="^[a-zA-Zа-яА-ЯЁё \-]+$" minlength="2" maxlength="32" required>
-            </li>
-            <li class="form__item form__item--phone">
-              <label class="form__label text-i" for="phone">
-                Телефон
-              </label>
-              <input class="form__input form__input--phone" type="tel" id="phone" name="phone" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-            </li>
-            <li class="form__item form__item--feedback">
-              <label class="form__label text-i" for="feedback">
-                Ваше сообщение
-              </label>
-              <textarea class="form__input form__input--feedback" id="feedback" name="feedback">
+        <div class="form__content">
+          <div class="form__text-block">
+            <h3 class="form__title heading-h3-g">
+              Напишите нам
+            </h3>
+            <p class="form__text text-g">
+              Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+            </p>
+          </div>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="form__list">
+              <li class="form__item form__item--name">
+                <label class="form__label text-i" for="name">
+                  Имя
+                </label>
+                <input class="form__input form__input--name" type="text" id="name" name="name" pattern="^[a-zA-Zа-яА-ЯЁё \-]+$" minlength="2" maxlength="32" required>
+              </li>
+              <li class="form__item form__item--phone">
+                <label class="form__label text-i" for="phone">
+                  Телефон
+                </label>
+                <input class="form__input form__input--phone" type="tel" id="phone" name="phone" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+              </li>
+              <li class="form__item form__item--feedback">
+                <label class="form__label text-i" for="feedback">
+                  Ваше сообщение
+                </label>
+                <textarea class="form__input form__input--feedback" id="feedback" name="feedback">
               </textarea>
-            </li>
-            <li class="form__item form__item--select">
-              <label class="form__label text-i" for="city">Выберите город</label>
-              <div class="form__select-wrap select">
-                <button class="select__button" type="button" aria-label="Сортировка"></button>
-                <ul class="select__list">
-                  <li class="select__item"></li>
-                  <li class="select__item" data-value="saint-petersburg">Санкт-Петербург</li>
-                  <li class="select__item" data-value="moscow">Санкт-Петербург</li>
-                  <li class="select__item" data-value="kazan">Санкт-Петербург</li>
-                  <li class="select__item" data-value="ufa">Санкт-Петербург</li>
-                </ul>
-                <input class="select__input-hidden" id="city" type="text" name="select__input" value="city">
-              </div>
-            </li>
-            <li class="form__item checkbox">
-              <label class="checkbox__label text-ch" for="checkbox">
-                Я согласен на обработку моих персональных <br>данных
-              </label>
-              <input class="checkbox__input" type="checkbox" id="checkbox" name="checkbox" required>
-            </li>
-          </ul>
-        </form>
+              </li>
+              <li class="form__item form__item--select">
+                <label class="form__label text-i" for="city">
+                  Выберите город
+                </label>
+                <div class="form__select-wrap select">
+                  <button class="select__button" type="button" aria-label="Сортировка"></button>
+                  <ul class="select__list">
+                    <li class="select__item select__item--active"></li>
+                    <li class="select__item" data-value="saint-petersburg">Санкт-Петербург</li>
+                    <li class="select__item" data-value="moscow">Санкт-Петербург</li>
+                    <li class="select__item" data-value="kazan">Санкт-Петербург</li>
+                    <li class="select__item" data-value="ufa">Санкт-Петербург</li>
+                  </ul>
+                  <input class="visually-hidden" id="city" type="text" name="select__input" value="city">
+                </div>
+              </li>
+              <li class="form__item-checkbox">
+                <input class="form__input-checkbox" type="checkbox" id="checkbox" name="checkbox" required>
+                <label class="form__label-checkbox text-ch" for="checkbox">
+                  Я согласен на обработку моих персональных <br>данных
+                </label>
+              </li>
+            </ul>
+            <button class="form__button-container" type="button">
+              <span class="form__button-text button-text-h">
+                отправить
+              </span>
+              <span class="form__button-toggle">
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="main-container__footer footer" data-test="footer">
+      <h2 class="visually-hidden"></h2><!-- НУЖНО ЗАМЕНИТЬ -->
+      <div class="footer__container">
+        <img class="footer__logo" src="./img/sprite/logo.svg" width="52" height="52" alt="Логотип проекта Internship.">
+        <ul class="footer__navigation">
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#about">О проекте</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#programs">Программы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#news">Новости</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link text-f" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="footer__copyright">
+          <a class="footer__copyright-link copyright-text" href="#">
+            Политика конфиденциальности
+          </a>
+          <span class="footer__copyright-text copyright-text">
+            Стажировка © 2023 Все права защищены
+          </span>
+        </div>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">
+                ВКонтакте
+              </span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="https://www.ok.com/user/htmlacademyru" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--reddit" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">
+                Reddit
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
