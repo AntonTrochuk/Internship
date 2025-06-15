@@ -1,5 +1,6 @@
 .news {
   background-color: $color-background-pampas;
+  overflow: hidden;
 }
 
 .news__container {
@@ -676,6 +677,7 @@
   box-sizing: border-box;
   border-radius: 20px;
   color: $color-text-button-n;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 32px;
